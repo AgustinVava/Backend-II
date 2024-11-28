@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Samsung Galaxy Note",
+    "description": "Celulares Samsung",
+    "price": 760.00,
+    "thumbnail": ["img1.jpg", "img2.jpg"],
+    "code": "CD001",
+    "stock": 150,
+    "category": "Celulares",
+    "status": true
+  },
+  {
+    "title": "Samsung S24",
+    "description": "Celulares Samsung",
+    "price": 890.00,
+    "thumbnail": ["img3.jpg", "img4.jpg"],
+    "code": "ZR002",
+    "stock": 80,
+    "category": "Celulares",
+    "status": true
+  },
+  {
+    "title": "Funda Xiaomi Redmi Note 13",
+    "description": "Fundas con Proteccion",
+    "price": 35.00,
+    "thumbnail": ["img5.jpg", "img6.jpg"],
+    "code": "RT003",
+    "stock": 30,
+    "category": "Fundas",
+    "status": true
+  },
+  {
+    "title": "Funda Samsung s24",
+    "description": "Fundas con Proteccion",
+    "price": 55.00,
+    "thumbnail": ["img7.jpg", "img8.jpg"],
+    "code": "MM004",
+    "stock": 60,
+    "category": "Fundas",
+    "status": true
+  },
+  {
+    "title": "Vidrio H9 Samsung S24",
+    "description": "Vidrios h9 Ultra Resistentes",
+    "price": 44.00,
+    "thumbnail": ["img9.jpg", "img10.jpg"],
+    "code": "BA005",
+    "stock": 200,
+    "category": "Vidrios Templados",
+    "status": true
+  },
+  {
+    "title": "Vidrio Antiespia Xiaomi Note 13 ",
+    "description": "Vidros antiespias.",
+    "price": 32.00,
+    "thumbnail": ["img11.jpg", "img12.jpg"],
+    "code": "SP010",
+    "stock": 100,
+    "category": "Vidrios Templados",
+    "status": true
+  },
+  {
+    "title": "Xiaomi Redmi 13C",
+    "description": "Celular ultima generacion Xiaomi",
+    "price": 360.00,
+    "thumbnail": ["img13.jpg", "img14.jpg"],
+    "code": "RD011",
+    "stock": 50,
+    "category": "Celulares",
+    "status": true
+  },
+  {
+    "title": "Xiaomi Redmi Note 13",
+    "description": "Celular ultima generacion Xiaomi",
+    "price": 690.00,
+    "thumbnail": ["img15.jpg", "img16.jpg"],
+    "code": "CR020",
+    "stock": 110,
+    "category": "Celulares",
+    "status": true
+  }
+]
