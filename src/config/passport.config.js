@@ -20,27 +20,20 @@ export const initializePassport = () => {
   passport.use(
     "register",
     new LocalStrategy({ passReqToCallback: true, usernameField: "email" }, async (req, username, password, done) => {
-      // Passport local utiliza las propiedades username y password
-      /* 
-      "register" es el nombre de la estrategia que estamos creando.
-      passReqToCallback: true, nos permite acceder a la request en la función de autenticación.
-      usernameField: "email", nos permite definir el campo que usaremos como username.
-      done es una función que debemos llamar cuando terminamos de procesar la autenticación.
-      Nota: passport recibe dos datos el username y el password, en caso de que no tengamos un campo username en nuestro formulario, podemos usar usernameField para definir el campo que usaremos como username.
-      */
+      
 
       try {
         const { first_name, last_name, age, role } = req.body;
-        // validar si el usuario existe
+        // valida si el usuario existe
         const user = await userDao.getByEmail(username);
 
-        // Si el usuario existe, retornamos un mensaje de error
+        //Usuario existente, retorna un mensaje de error
         if (user) return done(null, false, { message: "El usuario ya existe" }); // done es equivalente a un next() en los middlewares
 
-        // Creamos un carrito nuevo para el usuario
+        // Crea un carrito nuevo para el usuario
         const cart = await cartDao.create();
 
-        // Si el usuario no existe creamos un nuevo usuario
+        // Usuario no existeente, crea un nuevo usuario
         const newUser = {
           first_name,
           last_name,
@@ -78,13 +71,7 @@ export const initializePassport = () => {
     })
   );
 
-  // Serialización y deserialización de usuarios
-  /* 
-  La serialización y deserialización de usuarios es un proceso que nos permite almacenar y recuperar información del usuario en la sesión.
-  La serialización es el proceso de convertir un objeto de usuario en un identificador único.
-  La deserialización es el proceso de recuperar un objeto de usuario a partir de un identificador único.
-  Los datos del user se almacenan en la sesión y se recuperan en cada petición.
-  */
+
 
   passport.serializeUser((user, done) => {
     done(null, user._id);
