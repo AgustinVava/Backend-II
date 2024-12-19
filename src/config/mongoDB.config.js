@@ -1,11 +1,9 @@
 import mongoose from "mongoose";
-
+import envsConfig from "./envs.config.js";
+console.log(envsConfig.MONGO_URL);
 export const connectMongoDB = async () => {
   try {
-    await mongoose.connect("mongodb+srv://admin:123@cluster0.q5rht.mongodb.net/e-commerce", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    mongoose.connect(envsConfig.MONGO_URL);
     console.log("MongoDB connected");
   } catch (error) {
     console.log(`Error: ${error}`);
